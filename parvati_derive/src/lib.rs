@@ -34,7 +34,7 @@ pub fn derive(input: TokenStream) -> TokenStream {
     };
 
     let output = quote! {
-        impl ormlib::TableSerialize for #ident {
+        impl parvati::TableSerialize for #ident {
             #answer
         }
     };
@@ -94,7 +94,7 @@ pub fn derive_de(input: TokenStream) -> TokenStream {
     };
 
     let output = quote! {
-        impl ormlib::TableDeserialize for #ident {
+        impl parvati::TableDeserialize for #ident {
             #answer
 
             #code_token
