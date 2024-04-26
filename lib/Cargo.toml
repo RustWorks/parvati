@@ -10,7 +10,7 @@ license-file = "../LICENSE"
 keywords = ["orm", "sql", "database", "sqlite", "mysql"]
 categories = ["database"]
 readme = "../README.md"
-description = "Parvati: Indeed, an ORM library, not a framework, written in Rust"
+description = "Parvati library: ORM library with no boilerplate code, written in Rust"
 
 
 
