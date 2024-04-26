@@ -2,7 +2,8 @@
 
 ![Parvati](logo.png)
 
-Parvati library: Indeed, an ORM library, not a framework, written in Rust
+Parvati library: Indeed, an ORM library, not a framework, written in Rust. The goal of the project is to provide a library that reduces boilerplate code. Comparing Parvati with Diesel and SeaORM will highlight the differences.
+
 
 ## Features
 
