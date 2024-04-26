@@ -17,8 +17,8 @@ Cargo.toml
 
 ```toml
 [dependencies]
-parvati = {version = "1.0.1", features = ["sqlite"]} # or "mysql"
-parvati_derive = "1.0.1"
+parvati = {version = "1.0.2", features = ["sqlite"]} # or "mysql"
+parvati_derive = "1.0.2"
 ```
 
 ```rust
@@ -90,23 +90,23 @@ async fn test() -> Result<(), ORMError> {
 Example output:
 
 ```text 
-[2023-09-08T13:33:22Z DEBUG ormlib] "CREATE TABLE user (id INTEGER PRIMARY KEY AUTOINCREMENT, name  TEXT,age INTEGER)"
-[2023-09-08T13:33:22Z DEBUG ormlib] "insert into user (name,age) values (\"John\",30)"
-[2023-09-08T13:33:22Z DEBUG ormlib] "select * from user where rowid = 1"
-[2023-09-08T13:33:22Z DEBUG ormlib] "insert into user (name,age) values (\"Mary\",30)"
-[2023-09-08T13:33:22Z DEBUG ormlib] "select * from user where rowid = 2"
-[2023-09-08T13:33:22Z DEBUG ormlib] "select * from user where id = 1"
+[2023-09-08T13:33:22Z DEBUG parvati] "CREATE TABLE user (id INTEGER PRIMARY KEY AUTOINCREMENT, name  TEXT,age INTEGER)"
+[2023-09-08T13:33:22Z DEBUG parvati] "insert into user (name,age) values (\"John\",30)"
+[2023-09-08T13:33:22Z DEBUG parvati] "select * from user where rowid = 1"
+[2023-09-08T13:33:22Z DEBUG parvati] "insert into user (name,age) values (\"Mary\",30)"
+[2023-09-08T13:33:22Z DEBUG parvati] "select * from user where rowid = 2"
+[2023-09-08T13:33:22Z DEBUG parvati] "select * from user where id = 1"
 [2023-09-08T13:33:22Z DEBUG test::tests] User = Some(User { id: 1, name: Some("John"), age: 30 })
-[2023-09-08T13:33:22Z DEBUG ormlib] "select * from user"
+[2023-09-08T13:33:22Z DEBUG parvati] "select * from user"
 [2023-09-08T13:33:22Z DEBUG test::tests] Users = [User { id: 1, name: Some("John"), age: 30 }, User { id: 2, name: Some("Mary"), age: 30 }]
-[2023-09-08T13:33:22Z DEBUG ormlib] "update user set name = \"Mike\",age = 30 where id = 1"
-[2023-09-08T13:33:22Z DEBUG ormlib] "select * from user where id > 0 limit 2"
+[2023-09-08T13:33:22Z DEBUG parvati] "update user set name = \"Mike\",age = 30 where id = 1"
+[2023-09-08T13:33:22Z DEBUG parvati] "select * from user where id > 0 limit 2"
 [2023-09-08T13:33:22Z DEBUG test::tests] Users = [User { id: 1, name: Some("Mike"), age: 30 }, User { id: 2, name: Some("Mary"), age: 30 }]
-[2023-09-08T13:33:22Z DEBUG ormlib] "select * from user where name like \"M%\""
+[2023-09-08T13:33:22Z DEBUG parvati] "select * from user where name like \"M%\""
 [2023-09-08T13:33:22Z DEBUG test::tests] User = id: 1, name: Some("Mike")
 [2023-09-08T13:33:22Z DEBUG test::tests] User = id: 2, name: Some("Mary")
-[2023-09-08T13:33:22Z DEBUG ormlib] "update user set age = 100"
+[2023-09-08T13:33:22Z DEBUG parvati] "update user set age = 100"
 [2023-09-08T13:33:22Z DEBUG test::tests] updated_rows: 2
-[2023-09-08T13:33:22Z DEBUG ormlib] "delete from user where id = 1"
+[2023-09-08T13:33:22Z DEBUG parvati] "delete from user where id = 1"
 [2023-09-08T13:33:22Z DEBUG test::tests] updated_rows: 1
 ```
