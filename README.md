@@ -110,3 +110,11 @@ Example output:
 [2023-09-08T13:33:22Z DEBUG parvati] "delete from user where id = 1"
 [2023-09-08T13:33:22Z DEBUG test::tests] updated_rows: 1
 ```
+
+## Contributing
+I would love to see contributions from the community. If you experience bugs, feel free to open an issue. If you would like to implement a new feature or bug fix, please follow the steps:
+1. Contact with me via telegram: @ievkz
+2. Confirm e-mail invitation in repository
+3. Do "git clone"
+4. Create branch with your assigned issue
+5. Create pull request to main branch
